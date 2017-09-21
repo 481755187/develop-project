@@ -1,40 +1,58 @@
 package com.develop.entity;
 
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
+
 import java.util.Date;
 
+@TableName("user")
 public class User {
+    @TableId(value = "user_id" ,type = IdType.AUTO)
     private Integer userId;
 
+    @TableId(value = "user_name")
     private String userName;
 
+    @TableId(value = "user_phone")
     private String userPhone;
 
+    @TableId(value = "user_age")
     private Integer userAge;
 
+    @TableId(value = "user_name")
     private String userSex;
 
     private String password;
 
+    @TableId(value = "id_card")
     private String idCard;
 
+    @TableId(value = "user_pic")
     private String userPic;
 
+    @TableId(value = "user_type")
     private String userType;
 
+    @TableId(value = "work_type")
     private String workType;
 
     private String area;
 
     private String address;
 
+    @TableId(value = "creat_time")
     private Date createTime;
 
+    @TableId(value = "update_time")
     private Date updateTime;
 
     private String price;
 
+    @TableId(value = "is_address")
     private String isaddress;
 
+    @TableId(value = "is_work")
     private String iswork;
 
     private Date birthDate;
